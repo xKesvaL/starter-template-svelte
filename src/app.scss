@@ -59,6 +59,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  body {
+    min-height: 300vh;
+    @apply bg-neutral-99 text-neutral-10 dark:bg-neutral-10 dark:text-neutral-90;
+  }
+}
+
 @layer components {
   .display-large {
     font-size: 3.5625rem;

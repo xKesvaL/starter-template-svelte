@@ -11,7 +11,7 @@
 </script>
 
 <nav class="nav-container fixed bottom-0 left-0 right-0 {showName ? 'h-20' : 'h-16'} sm:hidden">
-  <div class="flex h-full items-center justify-around pt-3 pb-4 ">
+  <div class="nav-container-inner flex h-full items-center justify-around pt-3 pb-4 ">
     {#each names as name, i}
       <NavigationBarLink active={i === active} {name} href={hrefs[i]} {showName} />
     {/each}
