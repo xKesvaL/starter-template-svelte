@@ -7,8 +7,8 @@
   import HomeF1W5S24 from '$lib/icons/home-f1-w5-s24.svelte';
   import SearchF0W5S24 from '$lib/icons/search-f0-w5-s24.svelte';
   import SearchF1W5S24 from '$lib/icons/search-f1-w5-s24.svelte';
-  import ProfileF0W5S24 from '$lib/icons/profile-f0-w5-s24.svelte';
-  import ProfileF1W5S24 from '$lib/icons/profile-f1-w5-s24.svelte';
+  import FolderF0W5S24 from '$lib/icons/folder-f0-w5-s24.svelte';
+  import FolderF1W5S24 from '$lib/icons/folder-f1-w5-s24.svelte';
 
   export let active: boolean = false;
   export let name: string;
@@ -40,11 +40,11 @@
       {:else}
         <SearchF0W5S24 />
       {/if}
-    {:else if name === 'Profile'}
+    {:else if name === 'Library'}
       {#if active}
-        <ProfileF1W5S24 />
+        <FolderF1W5S24 />
       {:else}
-        <ProfileF0W5S24 />
+        <FolderF0W5S24 />
       {/if}
     {/if}
   </div>

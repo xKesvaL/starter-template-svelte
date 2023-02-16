@@ -5,7 +5,7 @@
   import NavigationBarLink from '$lib/components/base/NavigationBarLink.svelte';
 
   let active = 0;
-  let names = ['Home', 'Search', 'Profile'];
+  let names = ['Home', 'Search', 'Library'];
   let hrefs = ['/', '/search', '/profile'];
   let showName = false;
 </script>
