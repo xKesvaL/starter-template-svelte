@@ -8,6 +8,9 @@ This is my svelte starter template using material design's UI with TailwindCSS a
   - [Table of contents](#table-of-contents)
   - [Where To Start](#where-to-start)
   - [How to modify](#how-to-modify)
+    - [Icons](#icons)
+      - [SVG](#svg)
+      - [Fonts](#fonts)
   - [Contribution](#contribution)
   - [The rest below should be migrated to the wiki](#the-rest-below-should-be-migrated-to-the-wiki)
   - [Material Design](#material-design)
@@ -15,7 +18,7 @@ This is my svelte starter template using material design's UI with TailwindCSS a
       - [Surface Colors](#surface-colors)
       - [Dark Theme](#dark-theme)
       - [Custom Colors](#custom-colors)
-    - [Icons](#icons)
+    - [Material Icons](#material-icons)
       - [Target Size](#target-size)
     - [Transitions](#transitions)
     - [Responsiveness](#responsiveness)
@@ -37,6 +40,29 @@ Then open the tailwind.config.cjs file and into `theme:` replace the colors I pu
 ## How to modify
 
 The base is a template listing website that lists every component from material UI, using these same components. You can find all Matreial Design components in `lib/components/base`, and I advise you to not modify them unless you have read the whole material UI website. Each component has parameters that you can give them to customize them without having to modify them directly. You should only modify the `layout` folder, or create any new component.
+
+### Icons
+
+You can find all icons [here](https://fonts.google.com/icons). To use them, you have two choices, SVG or fonts.
+
+#### SVG
+
+You can just download them from the website I gave earlier, and put them in `/static/icons/`, they then will be available at `/icons/your-file-name.svg`  
+SVG is really supported by all browsers (99.83%) and is lightweight, so I would recommend only using SVG for icons.
+
+#### Fonts
+
+Again, I would recommend using SVGs, but you do you.  
+PS: The font is not loaded if you don't use it, so don't worry about that.  
+You can also use this bit of code and it will work everywhere in this project:
+
+```html
+<span class="material-symbols-outlined mso-700 mso-fill">icon_name</span>
+```
+
+The first class is **mandatory**, else it would not work, the second one is for the icon-weight, base one being 400. The third one is wether the icon should be filled or not, default is not filled.
+
+This is not optimal at all. The font is 2.4MB and is loading all the icons that they have, you can still get a static font, but I will let you do that yourself using google fonts icons.
 
 ## Contribution
 
@@ -86,7 +112,7 @@ They also provide values for a dark theme, here they are:
 **If you do use custom colors, please make sure they are accessible even for color blind people, you can use [adobe's tool](https://color.adobe.com/create/color-accessibility) to check that.**  
 If you need to use custom colors, please use the behavior that the primary color is using. Again, you can use the tool I gave at the top of this page.
 
-### Icons
+### Material Icons
 
 All icons used to this day come from [google fonts icons](https://fonts.google.com/icons) and there is only 4 sizes if icons you should use:
 
