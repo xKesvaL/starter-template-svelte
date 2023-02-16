@@ -19,7 +19,7 @@
 </script>
 
 <a
-  class="label-medium flex aspect-square flex-col items-center justify-center gap-1 transition-colors duration-300 {active
+  class="label-medium flex flex-col items-center justify-center gap-1 transition-colors duration-300 {active
     ? 'nav-item-container-active'
     : 'nav-item-container-inactive'}"
   {href}>
