@@ -55,6 +55,120 @@
   src: url('/fonts/material-font.woff2') format('woff2');
 }
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .display-large {
+    font-size: 3.5625rem;
+    line-height: 4rem;
+  }
+
+  .display-medium {
+    font-size: 2.8125rem;
+    line-height: 3.25rem;
+  }
+
+  .display-small {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+  }
+
+  .headline-large {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+  .headline-medium {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+  }
+
+  .headline-small {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .title-large {
+    font-size: 1.375rem;
+    line-height: 1.75rem;
+  }
+
+  .title-medium {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+  }
+
+  .title-small {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+  }
+
+  .label-large {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+  }
+
+  .label-medium {
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 500;
+  }
+
+  .label-small {
+    font-size: 0.6875rem;
+    line-height: 1rem;
+    font-weight: 500;
+  }
+
+  .body-large {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .body-medium {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  .body-small {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+
+  .nav-container {
+    @apply bg-neutral-99 dark:bg-neutral-10;
+  }
+
+  .nav-container-inner {
+    @apply bg-primary-40/8 dark:bg-primary-80/8;
+  }
+
+  .nav-item-container {
+    &-active {
+      @apply text-neutral-10 dark:text-neutral-90;
+    }
+
+    &-inactive {
+      @apply text-neutral-variant-30 dark:text-neutral-variant-80;
+    }
+  }
+
+  .active-indicator {
+    &-active {
+      @apply bg-secondary-90 text-secondary-10 focus-within:bg-neutral-10/12 hover:bg-neutral-10/8 focus:bg-neutral-10/12 active:bg-neutral-10/16 dark:bg-secondary-30 dark:text-secondary-90 dark:focus-within:bg-neutral-90/12 dark:hover:bg-neutral-90/8 dark:focus:bg-neutral-90/12 dark:active:bg-neutral-90/16;
+    }
+
+    &-inactive {
+      @apply text-neutral-variant-30 focus-within:bg-neutral-variant-30/12 hover:bg-neutral-variant-30/8 focus:bg-neutral-variant-30/12 active:bg-neutral-variant-30/16 dark:text-neutral-variant-80 dark:focus-within:bg-neutral-variant-80/12 dark:hover:bg-neutral-variant-80/8 dark:focus:bg-neutral-variant-80/12 dark:active:bg-neutral-variant-80/16;
+    }
+  }
+}
+
 .material-symbols-outlined {
   font-family: 'Material Symbols Outlined';
   font-weight: normal;
@@ -108,6 +222,6 @@
   font-variation-settings: 'FILL' 1;
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+svg {
+  fill: currentColor;
+}

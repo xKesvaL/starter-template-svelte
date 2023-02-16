@@ -39,7 +39,7 @@ Then open the tailwind.config.cjs file and into `theme:` replace the colors I pu
 
 ## How to modify
 
-The base is a template listing website that lists every component from material UI, using these same components. You can find all Matreial Design components in `lib/components/base`, and I advise you to not modify them unless you have read the whole material UI website. Each component has parameters that you can give them to customize them without having to modify them directly. You should only modify the `layout` folder, or create any new component.
+The base is a template listing website that lists every component from material UI, using these same components. You can find all Matreial Design components in `lib/components/base`, and I advise you to not modify them in any major way (major is refactoring, not just changing names in nav or icons) unless you have read the whole material UI website. Each component has parameters that you can give them to customize them without having to modify them directly. You should only modify the `layout` folder, or create any new component.
 
 ### Icons
 
@@ -47,7 +47,7 @@ You can find all icons [here](https://fonts.google.com/icons). To use them, you 
 
 #### SVG
 
-You can just download them from the website I gave earlier, and put them in `/static/icons/`, they then will be available at `/icons/your-file-name.svg`  
+You can just download them from the website I gave earlier, and put them in `/lib/icons/` as `.svelte` files, they then will be available at `/icons/your-file-name.svelte`  
 SVG is really supported by all browsers (99.83%) and is lightweight, so I would recommend only using SVG for icons.
 
 #### Fonts
@@ -86,7 +86,7 @@ On a range where 0 is black, 50 is pure color and 100 is white this is what Mate
 - On Primary Container: 10 (as in background when primary container is used for the content)
 
 ![Shading Color Material](readme/shading-color-material.png)
-TailwindCSS colors ranges from 0 to 1000, so we will just add a 0, 400 for the primary, 1000 (just use white) for the On Primary, etc...
+TailwindCSS colors ranges from 0 (white) to 1000 (black), but we will keep Material Design's scale: 0 is black and 100 is white, so the default TailwindCSS colors are replaced and if you want a custom color see [custom colors](#custom-colors).
 
 For neutral values, this is a bit different. In order, it is: 99, 10, 99, 10 neutrals (Background, On B, Surface, On S). Why 99 ? 99 Is the type of color that is white, but not white. See the picture up there, the background is very close to white, but it is not, and is more pleasing to look at.
 
