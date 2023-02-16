@@ -7,6 +7,8 @@ This is my svelte starter template using material design's UI with TailwindCSS a
 - [Svelte Starter Template](#svelte-starter-template)
   - [Table of contents](#table-of-contents)
   - [Where To Start](#where-to-start)
+  - [How to modify](#how-to-modify)
+  - [Contribution](#contribution)
   - [The rest below should be migrated to the wiki](#the-rest-below-should-be-migrated-to-the-wiki)
   - [Material Design](#material-design)
     - [Color Roles](#color-roles)
@@ -16,6 +18,8 @@ This is my svelte starter template using material design's UI with TailwindCSS a
     - [Icons](#icons)
       - [Target Size](#target-size)
     - [Transitions](#transitions)
+    - [Responsiveness](#responsiveness)
+    - [Sizes](#sizes)
     - [Figma Design Kit](#figma-design-kit)
   - [What Is Atomic Design](#what-is-atomic-design)
     - [Atoms](#atoms)
@@ -29,6 +33,14 @@ This is my svelte starter template using material design's UI with TailwindCSS a
 
 Get this [tool](https://m3.material.io/theme-builder#/custom) and choose your primary and tertiary color (secondary is auto-generated from primary).  
 Then open the tailwind.config.cjs file and into `theme:` replace the colors I put there with yours, or keep mine if you like them.
+
+## How to modify
+
+The base is a template listing website that lists every component from material UI, using these same components. You can find all Matreial Design components in `lib/components/base`, and I advise you to not modify them unless you have read the whole material UI website. Each component has parameters that you can give them to customize them without having to modify them directly. You should only modify the `layout` folder, or create any new component.
+
+## Contribution
+
+If you see any problem with a component (lack of responsiveness, bad technique) please open an issue or pull request and I will gladly accept you if you are following Material Design. I also accept enhancements to the SvelteKit server in general, but only general-usage ones. (e.g: I won't add MDSVEX, as this is not meant to be a blog)
 
 ## The rest below should be migrated to the wiki
 
@@ -98,6 +110,18 @@ You usually want a target that is 2x the size of the icon for 24x or 20x icons. 
 
 ![Transitions Material](readme/transitons-material.png)
 Here is a table of the transition duration and easing for the type of transition. This should give you a good idea of what to use when.
+
+### Responsiveness
+
+Two tables that represent what size corresponds to what window class, and what to use for each window class.
+PS: I followed their Figma Design Kit and the breakpoints there don't follow the ones you have on screen right now. They are quite close, so I kept the ones from figma.
+
+![Responsive Sizes](readme/responsive-sizes.png)
+![Responsive Components](readme/responsive-components.png)
+
+### Sizes
+
+Considering we are using the default [TailwindCSS spacing](https://tailwindcss.com/docs/customizing-spacing#default-spacing-scale), you should only use whole numbers and you should almost never use more than size-12 (48px), if you need more, consider using auto margins to make things responsive and flexible.
 
 ### Figma Design Kit
 
