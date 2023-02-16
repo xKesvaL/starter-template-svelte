@@ -5,15 +5,15 @@
   import NavigationBarLink from '$lib/components/base/NavigationBarLink.svelte';
 
   let active = 0;
-  let names = ['Home', 'Search', 'Library'];
-  let hrefs = ['/', '/search', '/profile'];
+  let names = ['Home', 'Search', 'Library', 'Profile'];
+  let hrefs = ['/', '/search', '/library', '/profile'];
   let showName = false;
 </script>
 
 <nav class="nav-container fixed bottom-0 left-0 right-0 {showName ? 'h-20' : 'h-16'} sm:hidden">
-  <div class="flex h-full items-center justify-evenly pt-3 pb-4 ">
-    {#each Array(3) as _, i}
-      <NavigationBarLink active={i === active} name={names[i]} href={hrefs[i]} {showName} />
+  <div class="flex h-full items-center justify-around pt-3 pb-4 ">
+    {#each names as name, i}
+      <NavigationBarLink active={i === active} {name} href={hrefs[i]} {showName} />
     {/each}
   </div>
 </nav>
