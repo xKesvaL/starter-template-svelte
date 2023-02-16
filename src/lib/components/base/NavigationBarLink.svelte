@@ -13,7 +13,7 @@
   export let active: boolean = false;
   export let name: string;
   export let href: string;
-  export let showName: boolean = true;
+  export let showName: boolean;
 
   $: active = $page.route.id === href;
 </script>
