@@ -13,6 +13,7 @@
   export let active: boolean = false;
   export let name: string;
   export let href: string;
+  export let showName: boolean = true;
 
   $: active = $page.route.id === href;
 </script>
@@ -47,5 +48,9 @@
       {/if}
     {/if}
   </div>
-  {name}
+  {#if showName}
+    <span class="label-medium text-center">{name}</span>
+  {:else}
+    <span class="sr-only">{name}</span>
+  {/if}
 </a>
